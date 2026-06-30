@@ -1,109 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign Up - EazziHub</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#4f46e5,#7c3aed);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
-
-.container{
-background:white;
-padding:35px;
-border-radius:15px;
-width:90%;
-max-width:400px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
-
-h1{
-text-align:center;
-color:#4f46e5;
-margin-bottom:10px;
-}
-
-p{
-text-align:center;
-color:#666;
-margin-bottom:20px;
-}
-
-input{
-width:100%;
-padding:14px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-}
-
-button{
-width:100%;
-padding:14px;
-background:#4f46e5;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#4338ca;
-}
-
-.link{
-text-align:center;
-margin-top:20px;
-}
-
-a{
-color:#4f46e5;
-text-decoration:none;
-font-weight:bold;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Eazzi Inc</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <h1>Eazzi Inc</h1>
+  <p>Create your account</p>
+</header>
 
-<h1>Create Account</h1>
+<section>
+  <div class="card" style="max-width:400px; margin:auto;">
+    
+    <h2>Sign Up</h2>
 
-<p>Join EazziHub Today</p>
+    <input type="text" id="signupName" placeholder="Full Name" style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="text" placeholder="Full Name">
+    <input type="email" id="signupEmail" placeholder="Email" style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="email" placeholder="Email">
+    <input type="password" id="signupPassword" placeholder="Password" style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="password" placeholder="Password">
+    <button class="btn" onclick="signupUser()">Create Account</button>
 
-<input type="password" placeholder="Confirm Password">
+    <p style="margin-top:10px;">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
 
-<button>Create Account</button>
+  </div>
+</section>
 
-<div class="link">
-Already have an account?
-<a href="login.html">Login</a>
-</div>
-
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
