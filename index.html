@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EazziHub</title>
+<title>Nexora</title>
 
 <style>
 *{
@@ -14,12 +14,12 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#0f172a;
+background:#081b29;
 color:white;
 }
 
 header{
-background:#6d28d9;
+background:linear-gradient(90deg,#0f172a,#0ea5e9);
 padding:20px;
 display:flex;
 justify-content:space-between;
@@ -27,64 +27,99 @@ align-items:center;
 }
 
 header h1{
-font-size:28px;
+font-size:30px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
+font-weight:bold;
 }
 
 .hero{
-text-align:center;
 padding:80px 20px;
+text-align:center;
 }
 
 .hero h2{
-font-size:45px;
+font-size:42px;
 margin-bottom:15px;
 }
 
 .hero p{
-font-size:20px;
-color:#ddd;
-margin-bottom:30px;
-}
-
-button{
-background:#8b5cf6;
-color:white;
-border:none;
-padding:15px 30px;
-border-radius:8px;
 font-size:18px;
-cursor:pointer;
+color:#cbd5e1;
+max-width:700px;
+margin:auto;
 }
 
-.features{
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:#06b6d4;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.services{
+padding:60px 20px;
+}
+
+.services h2{
+text-align:center;
+margin-bottom:40px;
+font-size:35px;
+}
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-padding:40px;
 }
 
 .card{
-background:#1e293b;
+background:#112e42;
 padding:25px;
-border-radius:12px;
-text-align:center;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:#0ea5e9;
 }
 
 .card h3{
-margin-bottom:10px;
+margin-bottom:15px;
+}
+
+.about{
+padding:60px 20px;
+text-align:center;
+background:#0f172a;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.contact{
+padding:60px 20px;
+text-align:center;
 }
 
 footer{
-background:#111827;
-padding:30px;
+background:#06121d;
+padding:20px;
 text-align:center;
-margin-top:50px;
+margin-top:40px;
 }
 </style>
 
@@ -93,71 +128,87 @@ margin-top:50px;
 <body>
 
 <header>
-<h1>EazziHub</h1>
+
+<h1>Nexora</h1>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Features</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="index.html">Home</a>
+<a href="login.html">Login</a>
+<a href="signup.html">Sign Up</a>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h2>Build. Learn. Work. Succeed.</h2>
+<h2>Innovating Careers. Connecting Journeys.</h2>
 
 <p>
-Your AI-powered platform for resumes,
-portfolios, learning and career growth.
+Nexora is a technology company providing AI-powered career tools,
+travel services, web development, and creative digital solutions for
+individuals and businesses worldwide.
 </p>
 
-<button>Get Started</button>
+<a href="signup.html" class="btn">Get Started</a>
 
 </section>
 
-<section class="features">
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="grid">
 
 <div class="card">
-<h3>AI Resume Builder</h3>
-<p>Create professional resumes in minutes.</p>
+<h3>🤖 Nexora Hub</h3>
+<p>AI Resume Builder, AI Interview Coach, Career Growth and Portfolio Builder.</p>
 </div>
 
 <div class="card">
-<h3>Portfolio Builder</h3>
-<p>Build your personal website easily.</p>
+<h3>✈️ DAARUN-NUR Travels</h3>
+<p>Flights, Visa Assistance, Hotel Reservations, Tours and Travel Support.</p>
 </div>
 
 <div class="card">
-<h3>Interview Coach</h3>
-<p>Prepare for interviews with AI.</p>
+<h3>💻 Nexora Web</h3>
+<p>Professional websites, web applications and business solutions.</p>
 </div>
 
 <div class="card">
-<h3>Learning Hub</h3>
-<p>Learn coding, design and business skills.</p>
+<h3>🎨 Nexora Design</h3>
+<p>Logos, Branding, Flyers, Social Media Graphics and UI Design.</p>
 </div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>About Nexora</h2>
+
+<p>
+Nexora is committed to helping people and businesses succeed through
+technology, innovation and digital transformation. Our mission is to
+deliver smart solutions that improve careers, travel experiences and
+business growth across the world.
+</p>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email: ishaqjimoh048@gmail.com</p>
+
+<p>Phone: +234 912 962 1077</p>
 
 </section>
 
 <footer>
 
-<h2>EazziHub</h2>
-
-<p>Build. Learn. Work. Succeed.</p>
-
-<br>
-
-<p>Email: ishaqjimoh048@gmail.com</p>
-
-<p>WhatsApp: +2349129621077</p>
-
-<p>Instagram: @eazzi.inc</p>
-
-<br>
-
-<p>© 2026 Eazzi Inc</p>
+© 2026 Nexora. All Rights Reserved.
 
 </footer>
 
