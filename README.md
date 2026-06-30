@@ -1,2 +1,2 @@
-# EazziHub
-An AI-powered career platform built by Eazzi Inc.
+# Nexora
+Nexora is an AI-powered platform offering career tools, travel & tours, web development, and digital solutions..
