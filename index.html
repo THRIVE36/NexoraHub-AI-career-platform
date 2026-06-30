@@ -1,116 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexora | Innovating Careers. Connecting Journeys.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexora Dashboard</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#081b29;
+color:#fff;
+}
+
+header{
+background:#0f172a;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#00d4ff;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.logout-btn{
+background:#ff4d4d;
+padding:10px 18px;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.hero{
+background:linear-gradient(135deg,#00b4db,#0083b0);
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.user-card{
+background:#112e42;
+padding:20px;
+border-radius:15px;
+margin-bottom:30px;
+}
+
+.user-card h2{
+margin-bottom:10px;
+color:#00d4ff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:#112e42;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:#0d4d73;
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+margin-bottom:20px;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+padding:10px 20px;
+background:#00d4ff;
+color:#081b29;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+footer{
+background:#0f172a;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <div class="logo">
-        <h2>Nexora</h2>
-    </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="dashboard.html">Dashboard</a>
-    </nav>
+<h1>Nexora Dashboard</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="contact.html">Contact</a>
+
+<button class="logout-btn" id="logoutBtn">Logout</button>
+
+</nav>
+
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Nexora</h1>
 
-        <p>
-            Innovating Careers. Connecting Journeys.
-            Your trusted partner for AI-powered career solutions,
-            travel services, web development and creative design.
-        </p>
+<h2>Welcome to Nexora</h2>
 
-        <a href="signup.html" class="btn">Get Started</a>
-        <a href="services.html" class="btn btn-secondary">Explore Services</a>
-    </div>
-</section>
-
-<section class="services">
-
-    <h2>Our Services</h2>
-
-    <div class="service-grid">
-
-        <div class="card">
-            <h3>🤖 Nexora Hub</h3>
-            <p>
-                AI Resume Builder, AI Interview Coach,
-                Career Development and Portfolio Builder.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>✈️ DAARUN-NUR Travels</h3>
-            <p>
-                Flights, Hotel Reservations,
-                Visa Assistance and Tour Packages.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>💻 Nexora Web</h3>
-            <p>
-                Professional websites,
-                web applications and business solutions.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🎨 Nexora Design</h3>
-            <p>
-                Logos, Flyers, Branding,
-                UI Design and Social Media Graphics.
-            </p>
-        </div>
-
-    </div>
+<p>AI-Powered Career & Innovation Platform</p>
 
 </section>
 
-<section class="about">
+<div class="container">
 
-    <h2>About Nexora</h2>
+<div class="user-card">
 
-    <p>
-        Nexora is a technology company committed to empowering
-        individuals and businesses through AI, travel,
-        web development and creative digital solutions.
-    </p>
+<h2>My Account</h2>
 
-</section>
+<p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
 
-<section class="cta">
+<p><strong>Status:</strong> Logged In ✅</p><div class="card">
+<h3>🎨 Nexora Design</h3>
+<p>Branding, logos, flyers and creative graphic design.</p>
+<a href="#" class="btn">View</a>
+</div>
 
-    <h2>Ready to Start?</h2>
+<div class="card">
+<h3>👤 My Profile</h3>
+<p>Manage your account details and personal information.</p>
+<a href="#" class="btn">Profile</a>
+</div>
 
-    <p>Join Nexora today and experience smarter digital solutions.</p>
+<div class="card">
+<h3>⚙️ Settings</h3>
+<p>Customize your Nexora dashboard experience.</p>
+<a href="#" class="btn">Settings</a>
+</div>
 
-    <a href="signup.html" class="btn">Create Free Account</a>
+<div class="card">
+<h3>📊 My Projects</h3>
+<p>Track your resumes, applications and AI activities.</p>
+<a href="#" class="btn">Open</a>
+</div>
 
-</section>
+</div>
+
+</div>
 
 <footer>
-
-    <p>© 2026 Nexora. All Rights Reserved.</p>
-
+<p>&copy; 2026 Nexora. All Rights Reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<script type="module">
 
-</body>
-</html>
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import {
+getAuth,
+onAuthStateChanged,
+signOut
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyBGNI_zvB9
