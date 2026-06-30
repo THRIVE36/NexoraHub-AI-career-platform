@@ -1,107 +1,51 @@
-:root{
-  --primary:#6c5ce7;
-  --secondary:#00d2d3;
-  --dark:#0f172a;
-  --light:#f8fafc;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
-
-body{
-  background:var(--light);
-  color:var(--dark);
-}
-
-/* HEADER */
-header{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-nav{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  margin-top:10px;
-  flex-wrap:wrap;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* HERO */
-.hero{
-  padding:60px 20px;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:40px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  font-size:18px;
-  opacity:0.8;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 20px;
-  background:var(--primary);
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#4834d4;
-}
-
-/* SECTIONS */
-section{
-  padding:50px 20px;
-  max-width:900px;
-  margin:auto;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  margin-top:15px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#111827;
-  color:white;
-  margin-top:40px;
-}
-
-.social a{
-  margin:0 10px;
-  color:var(--primary);
-  font-weight:bold;
-  text-decoration:none;
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e){
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if(target){
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
     }
+  });
+});
+
+// Simple button effect
+const btn = document.querySelector(".btn");
+if(btn){
+  btn.addEventListener("click", () => {
+    btn.innerText = "Loading...";
+    setTimeout(() => {
+      btn.innerText = "Explore Projects";
+    }, 1000);
+  });
+}// Fake signup system (frontend only)
+function signupUser(){
+  const name = document.getElementById("signupName").value;
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
+
+  if(name && email && password){
+    localStorage.setItem("user", JSON.stringify({name, email, password}));
+    alert("Account created successfully!");
+    window.location.href = "login.html";
+  } else {
+    alert("Please fill all fields");
+  }
+}
+
+// Fake login system
+function loginUser(){
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if(user && email === user.email && password === user.password){
+    alert("Login successful!");
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid credentials");
+  }
+}
