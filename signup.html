@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up | Eazzi Inc</title>
+  <title>Sign Up | Nexora</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>Eazzi Inc</h1>
+  <h1>Nexora</h1>
   <p>Create your account</p>
 </header>
 
@@ -35,5 +35,30 @@
 </section>
 
 <script src="script.js"></script>
+  window.signupUser = async function () {
+
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
+
+    if (!email || !password) {
+        alert("Please enter your email and password.");
+        return;
+    }
+
+    try {
+
+        await createUserWithEmailAndPassword(auth, email, password);
+
+        alert("Account created successfully!");
+
+        window.location.href = "login.html";
+
+    } catch (error) {
+
+        alert(error.message);
+
+    }
+
+};
 </body>
 </html>
