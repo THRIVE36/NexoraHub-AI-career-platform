@@ -31,7 +31,27 @@
 
   </div>
 </section>
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import {
+getAuth,
+signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyBGNI_zvB9DGSZP3qOUsd-QR9_XQaNmFR0",
+authDomain: "eazzihub.firebaseapp.com",
+projectId: "eazzihub",
+storageBucket: "eazzihub.firebasestorage.app",
+messagingSenderId: "593581035509",
+appId: "1:593581035509:web:a7f59ad9d58056d2631abc"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+</script>
 <script src="script.js"></script>
 </body>
 </html>
