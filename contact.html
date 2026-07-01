@@ -9,22 +9,80 @@
 
 <style>
 
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#081b29;
+color:white;
+}
+
+header{
+background:#0f172a;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+color:#00d4ff;
+margin:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+background:linear-gradient(135deg,#00b4db,#0083b0);
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h2{
+margin:0;
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+margin-top:10px;
+}
+
 .container{
-max-width:900px;
-margin:50px auto;
-padding:20px;
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
 }
 
 .card{
 background:#112e42;
 padding:30px;
 border-radius:15px;
-color:white;
+margin-bottom:25px;
 }
 
-input,textarea{
+.card h2{
+color:#00d4ff;
+margin-bottom:20px;
+}
+
+.info p{
+margin:12px 0;
+font-size:17px;
+}
+
+input,
+textarea{
 width:100%;
-padding:12px;
+padding:14px;
 margin:10px 0;
 border:none;
 border-radius:8px;
@@ -32,7 +90,8 @@ font-size:16px;
 }
 
 textarea{
-height:150px;
+height:160px;
+resize:vertical;
 }
 
 button{
@@ -51,5 +110,79 @@ button:hover{
 opacity:.9;
 }
 
-.info{
-margin-bottom:
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Nexora</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Contact Nexora</h2>
+
+<p>We'd love to hear from you.</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h<footer>
+
+<p>&copy; 2026 Nexora. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+document.querySelector("button").addEventListener("click",function(){
+
+const name=document.querySelector('input[type="text"]').value;
+
+const email=document.querySelector('input[type="email"]').value;
+
+const message=document.querySelector("textarea").value;
+
+if(name===""||email===""||message===""){
+
+alert("Please fill in all fields.");
+
+return;
+
+}
+
+alert("Thank you, "+name+"! Your message has been received.");
+
+document.querySelector('input[type="text"]').value="";
+
+document.querySelector('input[type="email"]').value="";
+
+document.querySelector("textarea").value="";
+
+});
+
+</script>
+
+</body>
+</html>
