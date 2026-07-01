@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Cover Letter Generator | Nexora</title>
 
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#081b29;
+color:white;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#112e42;
+padding:30px;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+color:#00d4ff;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+height:120px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#00d4ff;
+color:#081b29;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+#result{
+margin-top:30px;
+padding:20px;
+background:#0f172a;
+border-radius:10px;
+white-space:pre-wrap;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Cover Letter Generator</h1>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="company" placeholder="Company Name">
+
+<input type="text" id="position" placeholder="Job Position">
+
+<textarea id="skills" placeholder="Your Skills"></textarea>
+
+<textarea id="experience" placeholder="Your Experience"></textarea>
+
+<button onclick="generateLetter()">Generate Cover Letter</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function generateLetter(){
+
+const name=document.getElementById("name").value;
+const company=document.getElementById("company").value;
+const position=document.getElementById("position").value;
+const skills=document.getElementById("skills").value;
+const experience=document.getElementById("experience").value;
+
+document.getElementById("result").innerHTML=`
+
+<h2>Cover Letter</h2>
+
+<p>Dear Hiring Manager,</p>
+
+<p>I am writing to express my interest in the <strong>${position}</strong> position at <strong>${company}</strong>. My background and skills make me a strong candidate for this opportunity.</p>
+
+<p>I have experience in ${experience}. My key skills include ${skills}, and I am eager to contribute these abilities to your organization.</p>
+
+<p>I am enthusiastic about the opportunity to join your team and would welcome the chance to discuss how I can contribute to your company's success.</p>
+
+<p>Thank you for your time and consideration.</p>
+
+<p>Sincerely,</p>
+
+<p><strong>${name}</strong></p>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
