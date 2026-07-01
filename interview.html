@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Interview Coach | Nexora</title>
 
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#081b29;
+color:white;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#112e42;
+padding:30px;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+color:#00d4ff;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+select,textarea{
+width:100%;
+padding:12px;
+margin-top:8px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+height:150px;
+resize:vertical;
+}
+
+button{
+margin-top:20px;
+width:100%;
+padding:15px;
+background:#00d4ff;
+color:#081b29;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+#question{
+margin-top:25px;
+padding:20px;
+background:#0f172a;
+border-radius:10px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎤 AI Interview Coach</h1>
+
+<label>Select Job Role</label>
+
+<select id="role">
+<option>UI/UX Designer</option>
+<option>Frontend Developer</option>
+<option>Backend Developer</option>
+<option>Graphic Designer</option>
+<option>Data Analyst</option>
+<option>Software Engineer</option>
+</select>
+
+<label>Difficulty</label>
+
+<select id="level">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+
+<button onclick="startInterview()">Start Interview</button>
+
+<div id="question"></div>
+
+<label>Your Answer</label>
+
+<textarea placeholder="Type your answer here..."></textarea>
+
+<button>Submit Answer</button>
+
+</div>
+
+<script>
+
+function startInterview(){
+
+const role=document.getElementById("role").value;
+
+const questions={
+
+"UI/UX Designer":"How would you improve the user experience of an online shopping app?",
+
+"Frontend Developer":"Explain the difference between HTML, CSS and JavaScript.",
+
+"Backend
