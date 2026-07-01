@@ -84,105 +84,11 @@ textarea{
 width:100%;
 padding:14px;
 margin:10px 0;
-border:none;
-border-radius:8px;
-font-size:16px;
-}
-
-textarea{
-height:160px;
-resize:vertical;
-}
-
-button{
-width:100%;
-padding:15px;
-background:#00d4ff;
-color:#081b29;
-border:none;
-border-radius:8px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-}
-
-button:hover{
-opacity:.9;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Nexora</h1>
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="about.html">About</a>
-
-<a href="services.html">Services</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="dashboard.html">Dashboard</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h2>Contact Nexora</h2>
-
-<p>We'd love to hear from you.</p>
-
-</section>
-
-<div class="container">
-
-<div class="card">
-
-<h<footer>
+border:none<footer>
 
 <p>&copy; 2026 Nexora. All Rights Reserved.</p>
 
 </footer>
-
-<script>
-
-document.querySelector("button").addEventListener("click",function(){
-
-const name=document.querySelector('input[type="text"]').value;
-
-const email=document.querySelector('input[type="email"]').value;
-
-const message=document.querySelector("textarea").value;
-
-if(name===""||email===""||message===""){
-
-alert("Please fill in all fields.");
-
-return;
-
-}
-
-alert("Thank you, "+name+"! Your message has been received.");
-
-document.querySelector('input[type="text"]').value="";
-
-document.querySelector('input[type="email"]').value="";
-
-document.querySelector("textarea").value="";
-
-});
-
-</script>
 
 </body>
 </html>
