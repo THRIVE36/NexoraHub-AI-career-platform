@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexora Dashboard</title>
+
+<title>Nexora</title>
 
 <style>
 
@@ -11,97 +14,79 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
 background:#081b29;
-color:#fff;
+color:white;
 }
 
 header{
-background:#0f172a;
-padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
+padding:20px 8%;
+background:linear-gradient(90deg,#0f172a,#00b4db);
 }
 
 header h1{
-color:#00d4ff;
-}
-
-nav{
-display:flex;
-align-items:center;
-gap:18px;
+font-size:32px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-nav a:hover{
-color:#00d4ff;
-}
-
-.logout-btn{
-background:#ff4d4d;
-padding:10px 18px;
-border:none;
-border-radius:8px;
-color:white;
-cursor:pointer;
+margin-left:20px;
 font-weight:bold;
 }
 
 .hero{
-background:linear-gradient(135deg,#00b4db,#0083b0);
-padding:60px 20px;
 text-align:center;
+padding:90px 20px;
 }
 
 .hero h2{
-font-size:42px;
-margin-bottom:10px;
+font-size:48px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
-}
-
-.container{
-max-width:1200px;
+max-width:700px;
 margin:auto;
-padding:40px 20px;
+font-size:18px;
+line-height:1.7;
 }
 
-.user-card{
-background:#112e42;
-padding:20px;
-border-radius:15px;
-margin-bottom:30px;
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#00d4ff;
+color:#081b29;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
 }
 
-.user-card h2{
-margin-bottom:10px;
-color:#00d4ff;
+.section{
+padding:70px 8%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .card{
-background:#112e42;
+background:#16324b;
 padding:25px;
 border-radius:15px;
 transition:.3s;
@@ -109,33 +94,12 @@ transition:.3s;
 
 .card:hover{
 transform:translateY(-8px);
-background:#0d4d73;
-}
-
-.card h3{
-margin-bottom:15px;
-}
-
-.card p{
-margin-bottom:20px;
-line-height:1.6;
-}
-
-.btn{
-display:inline-block;
-padding:10px 20px;
-background:#00d4ff;
-color:#081b29;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
 }
 
 footer{
 background:#0f172a;
 text-align:center;
-padding:20px;
-margin-top:50px;
+padding:25px;
 }
 
 </style>
@@ -146,19 +110,15 @@ margin-top:50px;
 
 <header>
 
-<h1>Nexora Dashboard</h1>
+<h1>Nexora</h1>
 
 <nav>
 
 <a href="index.html">Home</a>
 
-<a href="about.html">About</a>
+<a href="login.html">Login</a>
 
-<a href="services.html">Services</a>
-
-<a href="contact.html">Contact</a>
-
-<button class="logout-btn" id="logoutBtn">Logout</button>
+<a href="signup.html">Sign Up</a>
 
 </nav>
 
@@ -166,60 +126,86 @@ margin-top:50px;
 
 <section class="hero">
 
-<h2>Welcome to Nexora</h2>
+<h2>Innovating Careers. Connecting Journeys.</h2>
 
-<p>AI-Powered Career & Innovation Platform</p>
+<p>Nexora is a technology company providing AI-powered career tools, travel services, web development and creative digital solutions for individuals and businesses worldwide.</p>
+
+<a href="login.html" class="btn">Get Started</a>
 
 </section>
 
-<div class="container">
+<section class="section">
 
-<div class="user-card">
+<h2>Our Services</h2>
 
-<h2>My Account</h2>
+<div class="grid"><div class="card">
 
-<p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+<h3>🤖 Nexora Hub</h3>
 
-<p><strong>Status:</strong> Logged In ✅</p><div class="card">
+<p>AI Resume Builder, AI Interview Coach, Career Growth and Portfolio Builder.</p>
+
+</div>
+
+<div class="card">
+
+<h3>✈️ DAARUN-NUR Travels</h3>
+
+<p>Flights, Visa Assistance, Hotel Reservations, Tours and Travel Support.</p>
+
+</div>
+
+<div class="card">
+
+<h3>💻 Nexora Web</h3>
+
+<p>Professional websites, web applications and business solutions.</p>
+
+</div>
+
+<div class="card">
+
 <h3>🎨 Nexora Design</h3>
-<p>Branding, logos, flyers and creative graphic design.</p>
-<a href="#" class="btn">View</a>
-</div>
 
-<div class="card">
-<h3>👤 My Profile</h3>
-<p>Manage your account details and personal information.</p>
-<a href="#" class="btn">Profile</a>
-</div>
-
-<div class="card">
-<h3>⚙️ Settings</h3>
-<p>Customize your Nexora dashboard experience.</p>
-<a href="#" class="btn">Settings</a>
-</div>
-
-<div class="card">
-<h3>📊 My Projects</h3>
-<p>Track your resumes, applications and AI activities.</p>
-<a href="#" class="btn">Open</a>
-</div>
+<p>Logos, Branding, Flyers, Social Media Graphics and UI Design.</p>
 
 </div>
 
 </div>
+
+</section>
+
+<section class="section" style="background:#101827;">
+
+<h2>About Nexora</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;font-size:18px;line-height:1.8;">
+
+Nexora is committed to helping people and businesses succeed through technology, innovation and digital transformation. Our mission is to deliver smart solutions that improve careers, travel experiences and business growth across the world.
+
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Contact Us</h2>
+
+<p style="text-align:center;font-size:18px;">
+📧 Email: jimohishaq99@gmail.com
+</p>
+
+<p style="text-align:center;font-size:18px;">
+📞 Phone: +234 912 962 1077
+</p>
+
+</section>
 
 <footer>
+
 <p>&copy; 2026 Nexora. All Rights Reserved.</p>
+
 </footer>
 
-<script type="module">
+</body>
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import {
-getAuth,
-onAuthStateChanged,
-signOut
-} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-
-const firebaseConfig = {
-apiKey: "AIzaSyBGNI_zvB9
+</html>
